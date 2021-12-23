@@ -10,7 +10,6 @@ const Main = () => {
     const restoreOriginalUri = () => {
         // Callback function to restore URI during login
     };
-    console.log(window.location.host);
     return (
 
         <Security
