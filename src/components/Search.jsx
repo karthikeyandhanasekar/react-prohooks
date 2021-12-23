@@ -29,7 +29,7 @@ const Search = () => {
         <tr>
             <td>{ele.title}</td>
             <td>{ele.author_name ? ele.author_name : "N/A"}</td>
-            <td>{ele.first_publish_year? ele.first_publish_year : "N/A"}</td>
+            <td>{ele.first_publish_year? ele.first_publish_year : "N/A  "}</td>
         </tr>
     )
     return (
