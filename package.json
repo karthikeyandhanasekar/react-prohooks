@@ -1,6 +1,7 @@
 {
   "name": "react-prohooks",
   "version": "0.1.0",
+  "homepage": "http://karthikeyandhanasekar.github.io/react-prohooks/",
   "private": true,
   "dependencies": {
     "@okta/okta-auth-js": "^5.9.1",
