@@ -4,7 +4,7 @@ const CALLBACK_PATH = '/login/callback';
 
 const ISSUER = `https://${OKTA_DOMAIN}/oauth2/default`;
 const HOST = window.location.host;
-const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
+const REDIRECT_URI = `http://${window.location.host}/login/callback`;
 const SCOPES = 'openid profile email';
 
 export const config = {

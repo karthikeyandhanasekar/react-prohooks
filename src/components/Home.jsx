@@ -1,27 +1,20 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
-import { Link } from "react-router-dom"
+import Header from "./Headers"
+import { useOktaAuth } from '@okta/okta-react';
 
 
 const Home = () => {
-    const location = useLocation().pathname
-    console.log(location);
+    const { authState, authService } = useOktaAuth();
 
+    const login = () => { authService.login('/search'); }
     return (
         <React.Fragment>
-            {location === '/' || location === '/react-prohooks' ?
-                <main className="home">
-                    <h1>Welcome to Books with Hooks</h1>
-                    <p>You need to signin to use the application</p>
-                    <Link to="/login" className="linkbuttons">Signin</Link>
-                </main> : null
-            }
-            {
-                location === '/login' ? <div>
-                    <h1>login</h1>
-                </div> : null
-            }
-
+            <Header />
+            <main>
+                <h1>Welcome to Books with Hooks</h1>
+                <p>You need to signin to use the application</p>
+                <button className="linkbuttons" onClick={login} >Signin</button>
+            </main>
         </React.Fragment>
     )
 }

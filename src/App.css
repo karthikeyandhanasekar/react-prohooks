@@ -27,6 +27,7 @@ main {
   text-align : center;
   line-height: 2;
   font-size  : 2vw;
+  border: solid;
 }
 
 .linkbuttons {
@@ -34,4 +35,35 @@ main {
   background-color: #282C34;
   color           : white;
   padding         : .5%;
+}
+form
+{
+  margin:0 auto;
+  border: groove;
+  width: fit-content;
+  padding:1%;
+  font-size: 1.5vw;
+  border: solid red;
+}
+form h3
+{
+  color: darkblue;
+}
+form label
+{
+  text-align: left;
+  display: block;
+}
+form input
+{
+  font-size: 1.1vw;
+  padding:2%
+}
+input[type=submit]
+{
+  width: 80%;
+  background-color: #282C34;
+  border: none;
+color: white;
+cursor: pointer;
 }
