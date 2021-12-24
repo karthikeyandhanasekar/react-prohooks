@@ -4,7 +4,7 @@ import { useOktaAuth } from '@okta/okta-react';
 
 
 const Home = () => {
-    const { authState, authService } = useOktaAuth();
+    const {authService } = useOktaAuth();
 
     const login = () => { authService.login('/search'); }
     return (

@@ -10,7 +10,8 @@ const Search = () => {
 
     const searchbook = async (name) => {
         try {
-            const api = await axios.get(`http://openlibrary.org/search.json?q=${name}`, {
+            const query = name.split(" ").join('+')
+            const api = await axios.get(`http://openlibrary.org/search.json?q=${query}`, {
             })
             setresult(api.data.docs)
         } catch (error) {
@@ -23,13 +24,13 @@ const Search = () => {
         if (search !== '')
             searchbook(search)
     }, [search])
-    results?.map(ele => console.log(ele))
+
     const ui = results?.map(ele =>
 
         <tr>
             <td>{ele.title}</td>
             <td>{ele.author_name ? ele.author_name : "N/A"}</td>
-            <td>{ele.first_publish_year? ele.first_publish_year : "N/A  "}</td>
+            <td>{ele.first_publish_year ? ele.first_publish_year : "N/A  "}</td>
         </tr>
     )
     return (
@@ -45,7 +46,7 @@ const Search = () => {
                     </tr>
                 </thead>
                 <tbody>
-        {ui}
+                    {ui}
                 </tbody>
             </table>
 
