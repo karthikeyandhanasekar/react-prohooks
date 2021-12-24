@@ -9,7 +9,7 @@ const Header = () =>
         <h3>ProHooks</h3>
         <nav>
           <NavLink to="/" className="links" >Home</NavLink>
-          <NavLink to="/" className="links" >Search</NavLink>
+          <NavLink to="/search" className="links" >Search</NavLink>
         </nav>
       </header>
     )
